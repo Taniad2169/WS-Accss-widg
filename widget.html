@@ -1,5 +1,5 @@
 <!-- ADA ACCESSIBILITY WIDGET PRO v2.0 -->
-<!-- COPY EVERYTHING FROM HERE TO END AND PASTE BEFORE </body> -->
+<!-- COPY EVERYTHING FROM HERE TO END AND PASTE BEFORE </body> TAG -->
 
 <style>
 /* WIDGET STYLES */
@@ -22,6 +22,11 @@
     align-items: center !important;
     justify-content: center !important;
     font-family: Arial, sans-serif !important;
+}
+
+.ada-widget-btn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
 .ada-widget-panel {
@@ -268,7 +273,7 @@
     display: block !important;
 }
 
-/* ========== HIGH CONTRAST FIX ========== */
+/* HIGH CONTRAST FIX */
 body.ada-high-contrast {
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -286,21 +291,17 @@ body.ada-high-contrast a:not(.ada-widget-btn):not(.ada-action-btn):not(.ada-rese
     background-color: transparent !important;
 }
 
-body.ada-high-contrast .ada-widget-btn,
-body.ada-high-contrast .ada-widget-panel,
-body.ada-high-contrast .ada-reading-guide {
-    background: linear-gradient(135deg, #0066cc, #004499) !important;
-    color: white !important;
-}
-
-/* Grayscale */
-body.ada-grayscale {
+/* Grayscale - FIXED: Widget stays visible */
+body.ada-grayscale *:not(.ada-widget-btn):not(.ada-widget-panel):not(.ada-widget-panel *):not(.ada-reading-guide) {
     filter: grayscale(100%) !important;
 }
 
-/* Invert Colors */
-body.ada-invert {
+/* Invert Colors - FIXED: Widget stays visible */
+body.ada-invert *:not(.ada-widget-btn):not(.ada-widget-panel):not(.ada-widget-panel *):not(.ada-reading-guide) {
     filter: invert(1) hue-rotate(180deg) !important;
+}
+
+body.ada-invert {
     background-color: #000 !important;
 }
 
@@ -598,7 +599,6 @@ body.ada-hide-images video {
     // Reset function
     function resetAll() {
         if (confirm('Reset all accessibility settings to default?')) {
-            // Reset state
             state.zoom = 100;
             state.textSize = 100;
             state.lineHeight = 150;
@@ -711,7 +711,6 @@ body.ada-hide-images video {
                 saveState();
             });
             
-            // Keyboard support
             toggle.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -737,12 +736,10 @@ body.ada-hide-images video {
         
         // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
-            // Escape closes panel
             if (e.key === 'Escape' && document.querySelector('.ada-widget-panel').classList.contains('active')) {
                 closePanel();
             }
             
-            // Ctrl+Alt+A opens panel
             if (e.ctrlKey && e.altKey && e.key === 'a') {
                 e.preventDefault();
                 togglePanel();
