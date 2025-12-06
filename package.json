@@ -1,0 +1,42 @@
+{
+  "name": "ada-accessibility-widget-pro",
+  "version": "2.0.0",
+  "description": "Complete ADA/WCAG Compliant Accessibility Widget for Websites",
+  "main": "widget.html",
+  "files": [
+    "widget.html",
+    "style.css",
+    "script.js",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "keywords": [
+    "accessibility",
+    "ada",
+    "wcag",
+    "a11y",
+    "disability",
+    "compliance",
+    "widget",
+    "website",
+    "tool"
+  ],
+  "author": "Your Business Name",
+  "license": "COMMERCIAL",
+  "homepage": "https://yourwebsite.com/widget",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ada-widget-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ada-widget-pro/issues"
+  },
+  "contributors": [
+    "Your Name <you@yourbusiness.com>"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://yourwebsite.com/buy"
+  }
+}
