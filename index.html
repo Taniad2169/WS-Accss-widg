@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADA Accessibility Widget Demo</title>
+    <style>
+        /* Basic demo page styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        
+        .demo-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0066cc, #004499);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .demo-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .demo-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .demo-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #0066cc;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3::before {
+            content: '✓';
+            background: #0066cc;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .demo-install {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #0066cc;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0066cc;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-header h1 {
+                font-size: 2em;
+            }
+            
+            .demo-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Header -->
+    <header class="demo-header">
+        <h1>ADA Accessibility Widget Pro</h1>
+        <p>WCAG 2.1 AA Compliant • One-Click Installation • Legal Protection</p>
+        <div style="margin-top: 20px;">
+            <span class="badge">Works in All 50 States</span>
+            <span class="badge">Mobile Responsive</span>
+            <span class="badge">No Coding Required</span>
+        </div>
+    </header>
+
+    <!-- Demo Content -->
+    <main>
+        <section class="demo-content">
+            <div class="feature-card">
+                <h3>Legal Compliance</h3>
+                <p>Meets ADA Title III, WCAG 2.1 AA, Section 508, and AODA requirements. Protect your business from lawsuits and accessibility complaints.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Easy Installation</h3>
+                <p>Copy one file, paste before &lt;/body&gt; tag. No configuration needed. The widget appears automatically on your website.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>User-Friendly</h3>
+                <p>Visually impaired users get 12+ accessibility tools: zoom, contrast, text-to-speech, reading guide, and more.</p>
+            </div>
+        </section>
+        
+        <section class="demo-install">
+            <h2>How to Install</h2>
+            <p><strong>For clients:</strong> They just paste this code before the closing &lt;/body&gt; tag:</p>
+            <pre>&lt;!-- ADA Widget Code --&gt;
+&lt;script src="https://cdn.yourdomain.com/widget.js"&gt;&lt;/script&gt;</pre>
+            
+            <p><strong>Or:</strong> Copy the entire widget.html file contents and paste before &lt;/body&gt;</p>
+            
+            <p style="margin-top: 20px; font-style: italic;">
+                Note: The blue accessibility button will appear in the bottom-right corner of your website automatically.
+            </p>
+        </section>
+        
+        <section style="text-align: center; padding: 40px 0;">
+            <h2>Features Included</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 30px 0;">
+                <div class="badge">Page Zoom (100-300%)</div>
+                <div class="badge">High Contrast Mode</div>
+                <div class="badge">Text-to-Speech</div>
+                <div class="badge">Reading Guide</div>
+                <div class="badge">Grayscale Mode</div>
+                <div class="badge">Link Highlighter</div>
+                <div class="badge">Font Controls</div>
+                <div class="badge">Image Hider</div>
+                <div class="badge">Saves Settings</div>
+                <div class="badge">Keyboard Navigation</div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #666; border-top: 1px solid #eee; margin-top: 50px;">
+        <p>© 2024 ADA Accessibility Widget Pro. Commercial License Required.</p>
+        <p>This is a demo page. The actual widget appears as a blue button in the bottom-right corner.</p>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- THE ACTUAL WIDGET IS BELOW - CLIENTS PASTE THIS -->
+    <!-- ============================================ -->
+    
+    <!-- Widget CSS and HTML would be here in the real widget.html file -->
+    <!-- This demo page doesn't include the actual widget code -->
+    <!-- Clients receive widget.html which contains everything -->
+    
+</body>
+</html>
